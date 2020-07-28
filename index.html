@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<style>
+
+		body {
+			background-color: white;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div>
+		I am a profile!
+	</div>
+</body>
+
+<script>
+		document.addEventListener("click", function (event) {
+			if ( event.target.tagName.toLowerCase() === "a" ) {
+				var target = event.target.getAttribute("href");
+				if(target.startsWith("#")) {
+				 window.location = "about:srcdoc"+target;
+				 event.preventDefault();
+				}
+			}
+		 }, false);
+	</script>
+</html>
